@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+ 
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    height: 900vh;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    order: 2; 
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+}
+
+nav{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.253);
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+
+.Logo{
+    height: 10vh;
+    width: 100px;
+    display: block;
+}
+
+.Logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    
+}
+
+.nav-links li{
+    margin: 20px;
+    transition: all 0.2s;
+}
+
+.nav-links :hover{
+    color: #088F8F;
+    transform: translateY(-2px);
+    transition: all 0.5s;
+}
+
+.nav-links a{
+    padding: 0.7rem;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+}
+
+.Container_iniziale_Bottiglia{
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+
+.Container_iniziale_Bottiglia img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(1px 0px 4px #000);
+}
+
+.Container_iniziale_Bottiglia h1{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25%;
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 8rem;
+    font-weight: 100;
+    z-index: 2;
+    
+}
+
+.Container_iniziale_Bottiglia span{
+    filter: drop-shadow(0px 0px 2px #000);
+    color: #C41E3A;
+}
+
+.Container_video{
+    background-color: #088F8F;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.Container_video video{
+    max-width: 760px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px 6px #000000;
+}
+
+
+.Container_punti{
+    width: 100%;
+    height: 100%;
+    position: absolute;    
+}
+
+#Punti{
+    width: 50%;
+    position: absolute;
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(248, 248, 238);
+    font-size: 18px;
+    filter: drop-shadow(0px 0px 2px #000);
+}
+
+
+
+.Primo_punto{
+    top: 0%;
+    left: 0%;
+}
+
+#Punti h1{
+    font-size: 29px;
+}
+
+.Secondo_punto{
+    top: 80%;
+    left: 0%;
+
+}
+
+.Terzo_punto{
+    top: 0%;
+    right: 0%;
+    text-align: end;
+}
+
+.Quarto_punto{
+    text-align: end;
+    top: 80%;
+    right: 0%;
+
+}
+
+#Numero{ 
+    font-size: 7vw;
+    color: #C41E3A;    
+}
+
+
+
+#Primo_tooltip {
+    font-size: 18px;
+    position: absolute;
+    left: 8%;
+    opacity: 0;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    width: 200px;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+#Secondo_tooltip{
+    font-size: 18px;
+    position: absolute;
+    text-align: left;
+    left: 8%;
+    top: -10%;
+    opacity: 0;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    width: 200px;
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.3s; 
+
+}
+
+#Terzo_tooltip{
+    font-size: 18px;
+    position: absolute;
+    text-align: left;
+    right: 4%;
+    opacity: 0;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    width: 200px;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+#Quarto_tooltip{
+    font-size: 18px;
+    position: absolute;
+    text-align: left;
+    right: 2%;
+    top: -10%;
+    opacity: 0;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    width: 200px;
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.3s; 
+}
+
+.Primo_punto:hover #Primo_tooltip {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Secondo_punto:hover #Secondo_tooltip {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Terzo_punto:hover #Terzo_tooltip {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Quarto_punto:hover #Quarto_tooltip {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .Container_iniziale_Bottiglia h1{
+        font-size: 10vw;
+        top: 35%;
+    }
+
+   
+}
+
+@media screen and (max-width: 950px) {
+    
+    #Secondo_tooltip{
+        top:100%;
+        transform: translateY(-10px);    
+    }
+    #Quarto_tooltip{
+        top:100%;
+        transform: translateY(-10px);    
+    }
+
+    .Primo_punto{
+        top: 2%;
+    }
+
+    .Terzo_punto {
+        top: 2%;
+    }
+   
+   
+}
+
+
+
+@media screen and (max-width: 768px) {
+    
+
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 8%;
+    }
+
+    .nav-links {
+        border: 1px solid black;
+        border-right: none ;
+        border-bottom-left-radius: 12px;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: white;
+        
+        height: 380px;
+        text-align: center;
+        top: 88px;
+        right: 0; /* Cambia "left" in "right" */
+        z-index: 4;
+        
+    }
+
+    .nav-links.active {
+        display: flex;
+      
+    }
+
+    .nav-links li{
+        margin-bottom: 60px;
+    }
+
+    .Container_iniziale_Bottiglia{
+        height: 80vh;
+       
+    }
+    .Container_iniziale_Bottiglia h1{
+        top: 40%;
+        font-size: 12vw;
+    }
+
+   
+    
+    .Container_video{
+        display: flex;
+        flex-direction: column;
+        height: 110vh;
+        width: 100%;
+        
+    }
+
+    .container_mp4{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50%;
+        padding-top: 50px;
+
+     
+    }
+
+    .container_mp4 video{
+        width:  90%;
+        
+    }
+
+    .Container_punti{
+        height: 58%;
+        width: 90%;
+        position: static;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 0px auto;
+        
+    }
+
+    #Numero{
+        font-size: 10vw;
+        padding-right: 10px;
+    }
+    #Punti h1{
+        font-size: 24px;
+    }
+
+    #Punti{
+        position: static;
+        width: 100%;
+    }
+
+    .Terzo_punto{
+        text-align: left;
+    }
+
+    .Quarto_punto{
+        text-align: left;
+    }
+
+    .Secondo_punto{
+        text-align: left;
+    }
+    
+}
+
+
+@media screen and (max-width: 650px) {
+   
+
+.Container_iniziale_Bottiglia{
+    height: 70vh;
+       
+}
+
+.Container_video{
+    height: 100vh;
+}
+
+
+
+#Punti h1{
+    font-size: 22px;
+}
+
+}
+
+
+
+@media screen and (max-width: 550px) {
+   
+
+    .container_mp4{
+        height: 40%;
+        padding-top: 20px;
+    
+    }
+    
+}
