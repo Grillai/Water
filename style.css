@@ -8,7 +8,8 @@
 }
 
 body{
-    height: 900vh;
+    height: 600vh;
+    position: relative;
 }
 
 .hamburger {
@@ -112,14 +113,20 @@ nav{
     justify-content: center;
     align-items: center;
     position: relative;
+
 }
 
-.Container_video video{
+.container_mp4{
     max-width: 760px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 25px 6px #000000;
+    z-index: 1;
 }
 
+.container_mp4 video{
+    max-width: 760px;
+    z-index: 2;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px 5px #000000;
+}
 
 .Container_punti{
     width: 100%;
@@ -258,7 +265,7 @@ nav{
 .Container_Titolo h1{
     font-family: 'Ubuntu', sans-serif;
     color: black;
-    font-size: 5vw;
+    font-size: 4vw;
     text-align: center;
     height: 15%;
     margin: 100px 0px;
@@ -341,7 +348,7 @@ nav{
     top: 20%;
     right: 0%;
     font-family: 'Ubuntu', sans-serif;
-    color: rgb(255, 255, 255);
+    color: beige;
     font-size: 35px;
     text-align: right;
     padding: 1.25rem;
@@ -354,7 +361,162 @@ nav{
 }
 
 
+.Container_Funzionamento{
+    height: 700px;
+    border: 1px solid red;
+}
 
+
+.Footer{
+    width: 100%;
+    height: 300px;
+    background-color: #088F8F;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.Container_Elementi{
+    height: 100%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    
+}
+
+.Container_Elementi li{
+    list-style: none;
+
+}
+
+
+
+.Container_Tappo{
+    height: 680px;
+    display: flex;
+    flex-direction: row-reverse;
+   
+   
+}
+#secondo_cotainer{
+    flex-direction: row;
+}
+
+#secondo_cotainer img{
+    object-fit: cover;
+}
+
+.Container_Tappo .Parte_destra{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    border-left: 1px solid black;
+}
+
+.Container_Tappo .Parte_destra img{
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.Container_Tappo .Parte_sinistra{
+    width: 50%;
+    height: 100%;
+}
+
+.Container_Tappo .Parte_sinistra h1{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 100;
+    font-size: 35px;
+    width: 100%;
+    margin: 0px auto;
+}
+
+
+.Container_Tappo .Parte_sinistra span{
+    
+    font-size: 40px;
+    color: #088F8F;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    
+}
+
+.Container_Tappo .Parte_sinistra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.Immagine_Sopra{
+    width: 100%;
+    height: 60px;
+
+    margin-bottom: -20px;
+}
+
+.Immagine_Sopra img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.Tappo_Smart{
+    height: 400px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 150px;
+    text-align: center;
+    position: relative;
+}
+
+
+
+
+.Tappo_Smart img{
+    object-fit: contain;
+    height: 100%;
+    width: 60%;
+    z-index: 12;
+  
+}
+
+.linea_orizzontale{
+    width: 99.9%;
+    position: absolute;
+    border: 1px solid black;
+    top: 50%;
+    z-index: -2;
+}
+
+.Testo_Tappo{
+    margin-top: 50px;
+    text-align: center;
+    
+}
+
+.Testo_Tappo h1{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 100;
+    font-size: 35px;
+    width: 100%;
+ 
+    margin: 0px auto;
+}
+
+.Testo_Tappo span{
+    
+    font-size: 40px;
+    color: #088F8F;
+    filter: drop-shadow(-2px 0px 1px #000);
+    
+}
 
 @media screen and (max-width: 1024px) {
     .Container_iniziale_Bottiglia h1{
@@ -515,6 +677,67 @@ nav{
         font-size: 25px;
         top: 10%;
     }
+
+    #Terzo_tooltip{
+  
+        text-align: left;
+        left: 8%;
+     
+        
+    }
+    #Quarto_tooltip{
+  
+        text-align: left;
+        left: 8%;
+     
+        
+    }
+
+    .Container_Tappo{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+    }
+
+    .Container_Tappo .Parte_destra{
+        height: 40%;
+        width: 100%;
+        border: none;
+   
+    }
+
+    .Container_Tappo .Parte_destra img{
+        height: 100%;
+        border: none;
+   
+    }
+
+    .Container_Tappo .Parte_sinistra{
+        width: 100%;
+        height: 60%;
+        padding-top: 40px;
+    }
+
+    .Immagine_Sopra{
+        padding-bottom: 20px;
+    }
+
+   .Container_Tappo .Parte_sinistra h1{
+        font-size: 20px;
+    }
+    
+    .Container_Tappo .Parte_sinistra span{
+        font-size: 23px;
+    }
+    
+    .Container_Titolo h1{
+        font-size: 5vw;
+    }
+    
+    #Funzionalità h1{
+        margin-bottom: 0px;
+    }
     
 }
 
@@ -555,7 +778,9 @@ nav{
 
     .second-carousel-text{
         width: 88.5%;
-        top: 10%;
+        top: 5%;
+        font-size: 5vw;
     }
+    
     
 }
