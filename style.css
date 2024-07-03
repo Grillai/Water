@@ -152,6 +152,7 @@ nav{
 
 #Punti h1{
     font-size: 29px;
+    padding: 0 20px;
 }
 
 .Secondo_punto{
@@ -192,6 +193,7 @@ nav{
     width: 200px;
     transform: translateY(-10px);
     transition: opacity 0.3s, transform 0.3s;
+    z-index: 99;
 }
 
 #Secondo_tooltip{
@@ -369,16 +371,14 @@ nav{
 
 .Footer{
     width: 100%;
-    height: 300px;
+    height: 350px;
     background-color: #088F8F;
-    position: absolute;
-    bottom: 0;
+   
 
 }
 
 .Container_Elementi{
     height: 100%;
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center ;
@@ -511,12 +511,230 @@ nav{
 }
 
 .Testo_Tappo span{
-    
     font-size: 40px;
     color: #088F8F;
     filter: drop-shadow(-2px 0px 1px #000);
     
 }
+
+
+.Container_Elementi{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.Container_logo{
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+}
+
+
+.Container_logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+.Footer .nav-links li a:hover{
+    color: white;
+}
+
+.Container_icone_social{
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Container_icone_social div{
+    cursor: pointer;
+}
+
+
+.nav-links_footer{
+   
+    max-width: 500px;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+    
+
+
+.nav-links_footer a{
+   
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+}
+
+.nav-links_footer a:hover{
+    color: white;
+}
+
+
+
+
+
+
+
+
+.outerdiv
+{
+	width: 100%;
+    height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.innerdiv
+{
+	transform: scale(0.9);
+	margin: 1rem;
+	display: grid;
+	grid-gap: 1.5rem;
+	grid-template-rows: repeat(2,22rem);
+	grid-template-columns: repeat(4,17rem);
+    font-family: "Open Sans", sans-serif;
+}
+.eachdiv
+{
+	padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 5px 5px 20px #6d6b6b6b;
+    color: white;
+}
+.div1
+{
+	background: #088F8F;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-image: url(https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 25rem;
+}
+.div2
+{
+	background:black;
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+.div3
+{
+	background: white;
+    grid-column: 4/5;
+    grid-row: 1/3;
+    color: black;
+}
+.div4
+{
+	background: white;
+	grid-column: 1/2;
+    grid-row: 2/3;
+    color: black;
+}
+.div5
+{
+	background: black;
+	grid-column: 2/4;
+    grid-row: 2/3;
+}
+.userdetails
+{
+	display: flex;
+}
+.imgbox
+{
+	margin-right: 1rem;
+}
+.imgbox img
+{
+	border-radius: 50%;
+	width: 2rem;
+	border: 2px solid #cec5c5;
+}
+.detbox
+{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.detbox p
+{
+	margin: 0;
+}
+.detbox .name
+{
+	color: hsl(0, 0%, 81%);
+    font-size: 0.9rem;
+    margin-bottom: 0.1rem;
+    font-weight: 600;
+}
+.detbox .name.dark
+{
+	color: #49505A;
+}
+.detbox .designation
+{
+	color: hsl(0, 0%, 81%);
+    opacity: 50%;
+    font-size: 0.8rem;
+}
+.detbox .designation.dark
+{
+	color: #49505A;
+}
+.review h4
+{
+	font-size: 1.4rem;
+	color: #ffffff;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+}
+.review.dark h4{
+	color:#4B5258;
+}
+.review p
+{
+	font-size: 0.95rem;
+    color: #ffffff;
+    font-weight: 600;
+    opacity: 70%;
+    line-height: 1.5;
+}
+.review.dark p{
+	color: #0e0e0e;
+}
+.attribution
+{
+	font-size: 1rem;
+    line-height: 1.5;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    text-align: right;
+}
+.attribution a
+{
+	text-decoration: none;
+}
+
+
+.Container_Elementi h6{
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    font-weight: 400;
+}
+
 
 @media screen and (max-width: 1024px) {
     .Container_iniziale_Bottiglia h1{
@@ -524,7 +742,15 @@ nav{
         top: 35%;
     }
 
+    .innerdiv
+	{
+		transform: scale(0.6);
+	}
    
+    .outerdiv{
+        height: 600px;
+
+    }
 }
 
 @media screen and (max-width: 950px) {
@@ -553,7 +779,10 @@ nav{
 
 @media screen and (max-width: 768px) {
     
-
+    .innerdiv
+	{
+		transform: scale(0.6);
+	}
     .hamburger {
         display: flex;
         position: absolute;
@@ -576,6 +805,8 @@ nav{
         z-index: 4;
         
     }
+
+   
 
     .nav-links.active {
         display: flex;
@@ -738,6 +969,20 @@ nav{
     #Funzionalità h1{
         margin-bottom: 0px;
     }
+
+
+    .outerdiv{
+        height: auto;
+    }
+
+    .innerdiv
+	{
+		display: flex; 
+		flex-direction: column;
+		transform: scale(1);
+		margin: 2rem;
+		margin-bottom: 5rem;
+	}
     
 }
 
@@ -782,5 +1027,14 @@ nav{
         font-size: 5vw;
     }
     
+
+    .nav-links_footer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links_footer li{
+        padding-bottom: 5px;
+    }
     
 }
